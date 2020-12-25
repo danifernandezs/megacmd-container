@@ -6,6 +6,15 @@ At [DockerHub](https://hub.docker.com/r/danifernandezs/megacmd)
 
 # TL;DR;
 
+Loops
+````bash
+docker run -d -e EMAIL= -e PASSWORD= danifernandezs/megacmd:1.4.0-3.1-loop signup
+docker run -d -e EMAIL= -e PASSWORD= danifernandezs/megacmd:1.4.0-3.1-loop clean
+docker run -d -e EMAIL= -e PASSWORD= danifernandezs/megacmd:1.4.0-3.1-loop ls
+docker run -d -e EMAIL= -e PASSWORD= danifernandezs/megacmd:1.4.0-3.1-loop upload
+docker run -d -e EMAIL= -e PASSWORD= danifernandezs/megacmd:1.4.0-3.1-loop download
+````
+
 Run it
 ```bash
 docker run -d --name=megacmd danifernandezs/megacmd:1.4.0-3.1 <MEGACMD COMMAND>
