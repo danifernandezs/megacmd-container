@@ -23,6 +23,10 @@ case $command in
     cd /opt/scripts && \
     ./download.sh ;;
 
+  upgrade )
+    cd /opt/scripts && \
+    ./upgrade.sh ;;
+
   * | help )
     echo "========================================"
     echo "  Command list:"
@@ -31,6 +35,7 @@ case $command in
     echo "    - clean          : Clean all account (Delete all content)"
     echo "    - upload         : Upload all, inside /tmp/files"
     echo "    - download       : Download all content, to /tmp/files"
+    echo "    - upgrade        : Update last date usage, Upload file and re-delete"
     echo "========================================"
     ;;
 
