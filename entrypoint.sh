@@ -27,6 +27,10 @@ case $command in
     cd /opt/scripts && \
     ./upgrade.sh ;;
 
+  psa )
+    cd /opt/scripts && \
+    ./psa.sh ;;
+
   * | help )
     echo "========================================"
     echo "  Command list:"
@@ -36,6 +40,7 @@ case $command in
     echo "    - upload         : Upload all, inside /tmp/files"
     echo "    - download       : Download all content, to /tmp/files"
     echo "    - upgrade        : Update last date usage, Upload file and re-delete"
+    echo "    - psa            : Discard psa message"
     echo "========================================"
     ;;
 
