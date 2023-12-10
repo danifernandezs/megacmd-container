@@ -1,10 +1,10 @@
-FROM debian:buster-20201209-slim
+FROM debian:buster-20231120-slim
 
 # To work with a container
 
 RUN echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker
 
-COPY files/mega*.deb /tmp/megacmd.deb
+COPY files/megacmd_1.6.3.4_amd64 /tmp/megacmd.deb
 
 RUN apt-get update && \
     apt install -y ./tmp/megacmd.deb && \
