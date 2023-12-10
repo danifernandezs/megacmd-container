@@ -2,6 +2,9 @@
 
 mega-logout
 mega-login $EMAIL $PASSWORD
-mega-ls
-mega-df -h
+sleep 5
+mega-cmd << EOF
+confirm --security
+EOF
+sleep 5
 mega-logout

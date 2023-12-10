@@ -35,6 +35,10 @@ case $command in
     cd /opt/scripts && \
     ./tree.sh ;;
 
+  security )
+    cd /opt/scripts && \
+    ./security.sh ;;
+
   * | help )
     echo "========================================"
     echo "  Command list:"
@@ -46,6 +50,7 @@ case $command in
     echo "    - download       : Download all content, to /tmp/files"
     echo "    - upgrade        : Update last date usage, Upload file and re-delete"
     echo "    - psa            : Discard psa message"
+    echo "    - security       : Security confirmation"
     echo "========================================"
     ;;
 
