@@ -4,7 +4,7 @@ FROM debian:buster-20231120-slim
 
 RUN echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker
 
-COPY files/megacmd_1.6.3.4_amd64 /tmp/megacmd.deb
+COPY files/megacmd_1.6.3.4_amd64.deb /tmp/megacmd.deb
 
 RUN apt-get update && \
     apt install -y ./tmp/megacmd.deb && \
