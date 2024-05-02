@@ -7,10 +7,10 @@ ENV PASSWORD=password
 
 RUN echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker
 
-COPY files/megacmd_1.6.3.4_amd64.deb /tmp/megacmd.deb
+COPY files/megacmd_1.6.3-4.1_amd64.deb /tmp/megacmd.deb
 
 RUN apt-get update && \
-    apt-get install -y curl && \
+    apt-get install -y curl jq && \
     apt install -y ./tmp/megacmd.deb && \
     rm -rf /var/lib/apt/lists/*
 
