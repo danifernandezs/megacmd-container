@@ -1,4 +1,4 @@
-FROM debian:buster-20231120-slim
+FROM debian:trixie-20260421-slim
 
 ENV EMAIL=email
 ENV PASSWORD=password
@@ -7,7 +7,7 @@ ENV PASSWORD=password
 
 RUN echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker
 
-COPY files/megacmd_1.6.3-4.1_amd64.deb /tmp/megacmd.deb
+COPY files/megacmd_2.5.2-1.1_amd64.deb /tmp/megacmd.deb
 
 RUN apt-get update && \
     apt-get install -y curl jq && \

@@ -39,6 +39,10 @@ case $command in
     cd /opt/scripts && \
     ./security.sh ;;
 
+  masterkey )
+    cd /opt/scripts && \
+    ./masterkey.sh ;;
+
   * | help )
     echo "========================================"
     echo "  Command list:"
@@ -51,6 +55,7 @@ case $command in
     echo "    - upgrade        : Update last date usage, Upload file and re-delete"
     echo "    - psa            : Discard psa message"
     echo "    - security       : Security confirmation"
+    echo "    - masterkey      : Obtain the account masterkey"
     echo "========================================"
     ;;
 
